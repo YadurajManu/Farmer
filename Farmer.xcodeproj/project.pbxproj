@@ -31,6 +31,7 @@
 		90882DAE2DA55C31002D1362 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 90882DAD2DA55C31002D1362 /* FirebaseStorage */; };
 		90882DB02DA55C31002D1362 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 90882DAF2DA55C31002D1362 /* FirebaseStorageCombine-Community */; };
 		90882DB22DA55C31002D1362 /* FirebaseVertexAI in Frameworks */ = {isa = PBXBuildFile; productRef = 90882DB12DA55C31002D1362 /* FirebaseVertexAI */; };
+		90882DD32DA58E70002D1362 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 90882DD22DA58E70002D1362 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 				90882D962DA55C31002D1362 /* FirebaseDatabase in Frameworks */,
 				90882D982DA55C31002D1362 /* FirebaseDynamicLinks in Frameworks */,
 				90882D8A2DA55C31002D1362 /* FirebaseAppCheck in Frameworks */,
+				90882DD32DA58E70002D1362 /* Kingfisher in Frameworks */,
 				90882D8E2DA55C31002D1362 /* FirebaseAuth in Frameworks */,
 				90882D842DA55C31002D1362 /* FirebaseAnalytics in Frameworks */,
 				90882D9A2DA55C31002D1362 /* FirebaseFirestore in Frameworks */,
@@ -187,6 +189,7 @@
 				90882DAD2DA55C31002D1362 /* FirebaseStorage */,
 				90882DAF2DA55C31002D1362 /* FirebaseStorageCombine-Community */,
 				90882DB12DA55C31002D1362 /* FirebaseVertexAI */,
+				90882DD22DA58E70002D1362 /* Kingfisher */,
 			);
 			productName = Farmer;
 			productReference = 90882D3E2DA54969002D1362 /* Farmer.app */;
@@ -272,6 +275,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				90882D822DA55C31002D1362 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				90882DD12DA58E70002D1362 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 90882D3F2DA54969002D1362 /* Products */;
@@ -473,6 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8D5D6HU857;
@@ -490,6 +495,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Manu.Farmer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -646,6 +652,14 @@
 				minimumVersion = 11.11.0;
 			};
 		};
+		90882DD12DA58E70002D1362 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.3.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -768,6 +782,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 90882D822DA55C31002D1362 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseVertexAI;
+		};
+		90882DD22DA58E70002D1362 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90882DD12DA58E70002D1362 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

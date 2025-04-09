@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "6603A3A8-6D68-4930-81AF-C0F554598C2F"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4DE4439C-A755-4F4B-B9CC-F0F1946B67F9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Farmer/RecommendationsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "262"
+            endingLineNumber = "262"
+            landmarkName = "RecommendationsViewModel"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "4DE4439C-A755-4F4B-B9CC-F0F1946B67F9 - f720b5bc71843566"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Farmer.RecommendationsViewModel.__allocating_init() -&gt; Farmer.RecommendationsViewModel"
+                  moduleName = "Farmer.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sujeetkumarsingh/Desktop/Farmer/Farmer/RecommendationsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "4DE4439C-A755-4F4B-B9CC-F0F1946B67F9 - 6610df859140ab9b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Farmer.RecommendationsViewModel.deinit"
+                  moduleName = "Farmer.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sujeetkumarsingh/Desktop/Farmer/Farmer/RecommendationsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "4DE4439C-A755-4F4B-B9CC-F0F1946B67F9 - 994520b851e189a8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Farmer.RecommendationsViewModel.__deallocating_deinit"
+                  moduleName = "Farmer.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sujeetkumarsingh/Desktop/Farmer/Farmer/RecommendationsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "4DE4439C-A755-4F4B-B9CC-F0F1946B67F9 - a22f64929ba960ba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Farmer.RecommendationsViewModel.init() -&gt; Farmer.RecommendationsViewModel"
+                  moduleName = "Farmer.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sujeetkumarsingh/Desktop/Farmer/Farmer/RecommendationsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "268"
+                  endingLineNumber = "268">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
