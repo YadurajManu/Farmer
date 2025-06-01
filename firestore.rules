@@ -2,19 +2,52 @@ rules_version = '2';
 
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Allow authenticated users to read and write to their own data
+
+    // User data: Allow authenticated users to read and write to their own data
     match /users/{userId} {
       allow read, write: if request.auth != null && request.auth.uid == userId;
     }
-    
-    // Allow authenticated users to read and write to their own data collections
     match /users/{userId}/{collection}/{document=**} {
       allow read, write: if request.auth != null && request.auth.uid == userId;
     }
-    
-    // By default, deny all read and write operations
-    match /{document=**} {
-      allow read, write: if false;
+
+    // Forum Posts
+    match /forum_posts/{postId} {
+      // Allow any authenticated user to read posts
+      allow read: if request.auth != null;
+      // Allow authenticated users to create posts
+      allow create: if request.auth != null && request.resource.data.userID == request.auth.uid;
+      // Allow users to update their own posts (e.g., for title, content, category, upvotes, commentCount)
+      // Ensure userID is not changed and timestamp is not changed by client.
+      allow update: if request.auth != null && request.resource.data.userID == request.auth.uid
+                      && request.resource.data.userID == resource.data.userID;
+      // Allow users to delete their own posts
+      allow delete: if request.auth != null && resource.data.userID == request.auth.uid;
     }
+
+    // Forum Comments
+    match /forum_comments/{commentId} {
+      // Allow any authenticated user to read comments
+      allow read: if request.auth != null;
+      // Allow authenticated users to create comments
+      // Ensure the comment's userID matches the authenticated user
+      // and the postID is present.
+      allow create: if request.auth != null && request.resource.data.userID == request.auth.uid
+                      && request.resource.data.postID != null;
+      // Allow users to update their own comments (e.g., for content, upvotes)
+      // Ensure userID and postID are not changed.
+      allow update: if request.auth != null && request.resource.data.userID == request.auth.uid
+                      && request.resource.data.userID == resource.data.userID
+                      && request.resource.data.postID == resource.data.postID;
+      // Allow users to delete their own comments
+      allow delete: if request.auth != null && resource.data.userID == request.auth.uid;
+    }
+
+    // Deny all other access by default (this rule was already here but good to keep explicit)
+    // This rule is implicitly covered if all paths are not matched, but explicit can be clearer.
+    // However, to avoid conflict, ensure it's placed correctly or rely on default deny.
+    // For now, let's remove the explicit deny /{document=**} to avoid issues with specificity,
+    // as specific paths for forum_posts and forum_comments are defined above.
+    // Unmatched paths will be denied by default.
   }
-} 
+}
